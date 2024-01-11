@@ -1,482 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+    <title>Welcome to my Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
- 
-    <link rel="stylesheet" href="style.css">
-    <!-- fade effect style -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Manifest-->
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+    <!-- splash screen script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hide splash screen after 3 seconds (adjust as needed)
+        setTimeout(function () {
+          document.getElementById("splash-screen").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        }, 3000);
+      });
+    </script>
+  </head>
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <body>
+    <!-- Splash Screen -->
+    <!-- <div id="splash-screen">
+  <img src="assets/images/Ayodele logo.png" alt="Splash Logo">
+</div> -->
+    <!-- desktop-nav -->
+    <nav id="desktop-nav">
+      <div class="logo">
+        <img src="assets/images/Ayodele logo.png" alt="My perosonal Logo" />
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#academicHistory">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#testimonialSection">Testimonials</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
 
- <!-- font-awesome -->
- <script src="https://kit.fontawesome.com/8ea43b1ea3.js" crossorigin="anonymous"></script>
+    <!-- mobile view navigation  -->
 
-    <title>Ayodele.me</title>
-      
-</head>
-<body>
-    
-    <div class="sidecontacts">
-        <a href="http://www.facebook.com/oduola.ayodele" target="_blank" class="socialicon"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://twitter.com/AY00R" class="socialicon" target="_blank" ><i class="fa-brands fa-square-twitter"></i></a>
-        <a href="https://www.instagram.com/ayoor10/" class="socialicon" target="_blank" > <i class="fa-brands fa-instagram "></i></a>
-        <a href="https://www.linkedin.com/in/ayodele-oduola-aa6a85135/" class="socialicon" target="_blank" > <i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Ayoor" class="socialicon" target="_blank" > <i class="fa-brands fa-github"></i></a>
-       </div>
-       
-       <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Ayoor</a>
-          <button class="navbar-toggler d-flex collapsed
-          d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="toggler-icon top-bar"></span>
-            <span class="toggler-icon middle-bar"></span>
-            <span class="toggler-icon bottom-bar"></span>
+    <nav id="hamburger-nav">
+      <!--  
+      nav logo
+      <div class="logo">
+        <img src="assets/images/images/Ayodele logo.png" alt="My perosonal Logo" />
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+-->
+      <!-- mobile view nav links -->
+      <div class="menu-links">
+        <ul>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- home page  -->
+    <main class="backwrapper1">
+      <section id="profile">
+        <div class="section__pic-container">
+          <!-- <img
+            id="logo"
+            src="./assets/images/Ayodele.png"
+            alt="A picture of me"
+          /> -->
+          <picture>
+            <img
+              id="landingimg"
+              src="./assets/images/Ayodele.png"
+              alt="A picture of me"
+            />
+            <source srcset="cat.avif" type="image/avif" />
+            <source srcset="cat.webp" type="image/webp" />
+          </picture>
+        </div>
+
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Ayodele Oduola</h1>
+          <p class="section__text__p2">A Software Engineer</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./assets/images/Ayodele Resume Software.docx')"
+            >
+              Download CV
+            </button>
+            <button
+              class="btn btn-color-1"
+              onclick="location.href='./#contact'"
+            >
+              Contact Me
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="./assets/images/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="location.href='https://www.linkedin.com/in/ayodele-oduola/'"
+            />
+            <img
+              src="./assets/images/github.png"
+              alt="My Github profile"
+              class="icon"
+              onclick="location.href='https://github.com/Ayoor'"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Smooth Scroll down arrow  -->
+      <div class="downarrow">
+        <img
+          src="./assets/images/arrow.png"
+          alt="Arrow icon"
+          class="arrow"
+          onclick="location.href='./#about'"
+        />
+      </div>
+    </main>
+
+    <!-- About section -->
+    <main class="backwrapper2 about">
+      <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img 
+            src="./assets/images/self_Portrait.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+            <!-- <picture>
+              <img 
+              src="./assets/images/self_Portrait.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+            <source srcset="cat.avif" type="image/avif" />
+            <source srcset="cat.webp" type="image/webp" />
+            </picture> -->
+            
+          </div>
+          <div class="about-details-container">
+            <div class="text-container">
+              <p>
+                I am experienced in designing and developing robust software
+                solutions and committed to problem-solving and enhancing user
+                experiences. I Collaborate effectively with cross-functional
+                teams to deliver high-quality software products on time. I also
+                have a solid foundation in software development principles and
+                methodologies and am dedicated to continuous learning and
+                staying updated with emerging technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Smooth Scroll down arrow  -->
+      <div class="downarrow">
+        <img
+          src="./assets/images/arrow.png"
+          alt="Arrow icon"
+          class="arrow"
+          onclick="location.href='./#experience'"
+        />
+      </div>
+    </main>
+
+    <!-- Professional experience -->
+    <section id="experience">
+      <main>
+        <h1 class="title">Professional History</h1>
+        <br />
+        <div class="tableBorder">
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Duration</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Company">Dangote Cement</td>
+                <td data-title="Title">Control Room Engineer</td>
+                <td data-title="Duration">April 2018 - Dec 2023</td>
+                <td data-title="Description" class="achievements-column">
+                  Worked in the heart of Nigeria's biggest cement manufacturing
+                  company to produce over 4.5 million metric tonnes of the
+                  finest cement.
+                </td>
+              </tr>
+              <tr>
+                <td data-title="Company">MEMMCOL</td>
+                <td data-title="Title">Junior Software Developer</td>
+                <td data-title="Duration">May 2017- April 2018</td>
+                <td data-title="Description" class="achievements-column">
+                  Worked with Nigeria's only 100% local meter manufacturing
+                  company to develop quality software for electricity vending
+                  and distribution.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <!-- Academic History -->
+      <main id="academicHistory" style="margin-top: 20px">
+        <h1 class="title">Education</h1>
+        <br />
+        <div class="tableBorder">
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>Institution</th>
+                <th>Degree</th>
+                <th>Field</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td data-title="Institution">Staffordshire University</td>
+                <td data-title="Degree">Masters</td>
+                <td data-title="Field">Software Engineering</td>
+                <td data-title="Duration">Jan 2023 - May 2024</td>
+              </tr>
+              <tr>
+                <td data-title="Institution">Bowen University</td>
+                <td data-title="Degree">Bachelors</td>
+                <td data-title="Field">Computer Science</td>
+                <td data-title="Duration">September 2011- August 2015</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </section>
+
+    <!-- Smooth Scroll down arrow  -->
+    <div class="downarrow">
+      <img
+        src="./assets/images/arrow.png"
+        alt="Arrow icon"
+        class="arrow"
+        onclick="location.href='./#skillsSection'"
+      />
+    </div>
+
+    <!-- Skills section  -->
+    <main class="backwrapper1" id="skill">
+      <section id="skillsSection">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Web Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>BootStrap</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Php</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Jquery</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Wordpress</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>SQL</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Firebase</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Git</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="details-container">
+              <h2 class="experience-sub-title">Devops</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CI/CD</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Ansible</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Terraform</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Vagrant</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Linux</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Bash</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>AWS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Kubernettes</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>IAC</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/images/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Jenkins</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Smooth Scroll down arrow  -->
+      <div class="downarrow">
+        <img
+          src="./assets/images/arrow.png"
+          alt="Arrow icon"
+          class="arrow"
+          onclick="location.href='./#projects'"
+        />
+      </div>
+    </main>
+
+    <!-- projects section -->
+    <main class="backwrapper2" id="project">
+      <section id="projects">
+        <p class="section__text__p1">Showcasing My Skills with</p>
+        <h1 class="title">Project</h1>
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div>
+              <img
+                src="./assets/images/Currency.png
+                "
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Currency Converter</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./Currency Converter/index.html', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/images/forecasterscreenshot.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">
+              Fuel Price Forecaster
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./Forcaster/forcaster.html', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Smooth Scroll down arrow  -->
+      <div class="downarrow">
+        <img
+          src="./assets/images/arrow.png"
+          alt="Arrow icon"
+          class="arrow"
+          onclick="location.href='./#testimonialSection'"
+        />
+      </div>
+    </main>
+
+    <!-- Testimonial section -->
+    <section id="testimonialSection">
+      <h1 class="title">Testimonials</h1>
+      <p class="section__text__p1">Other reasons to Hire Me</p>
+
+      <main id="testimonialcontainer">
+        <div class="testimonialCard">
+          <img
+            src="assets/images/James2.jpg"
+            alt="Image of James"
+            class="testimonialImg"
+          />
+          <div class="testimonialContent">
+            <h3 style="text-align: right">-James</h3>
+            <p>
+              "I had the pleasure of working with Ayodele, and I must say, his
+              professionalism and attention to detail were exceptional.
+              Ayodele's expertise made the entire process smooth, and I would
+              highly recommend his services."
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonialCard">
+          <img
+            src="assets/images/Amanda.jpg"
+            alt="Image of Amanda"
+            class="testimonialImg"
+          />
+          <div class="testimonialContent">
+            <h3 style="text-align: right">-Amanda</h3>
+            <p>
+              "Working with Ayodele was a true pleasure. His strong work ethic
+              and ability to tackle challenges head-on set him apart. Ayodele's
+              contributions were invaluable to our project, and I would eagerly
+              recommend him to others."
+            </p>
+          </div>
+        </div>
+        <div class="testimonialCard">
+          <img
+            src="assets/images/Rebecca.jpg"
+            alt="Image of Rebecca"
+            class="testimonialImg"
+          />
+          <div class="testimonialContent">
+            <h3 style="text-align: right">-Rebecca</h3>
+            <p>
+              "Ayodele provided outstanding support and guidance. His dedication
+              to delivering quality results is commendable. I appreciate
+              Ayodele's skill set and would recommend him to anyone seeking a
+              reliable and skilled individual."
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonialCard">
+          <img
+            src="assets/images/Sola.jpg"
+            alt="Image of Sola"
+            class="testimonialImg"
+          />
+          <div class="testimonialContent">
+            <h3 style="text-align: right">-Sola</h3>
+            <p>
+              "Ayodele is a reliable and dedicated professional. His commitment
+              to achieving excellence is evident in every task he takes on. I've
+              had the privilege of collaborating with Ayodele, and I highly
+              recommend him for his expertise and positive work attitude."
+            </p>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+
+      <form>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message">Message (up to 500 characters):</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          maxlength="500"
+          required
+        ></textarea>
+        <div class="counter" id="counter">500 characters remaining</div>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="robotCheck">I am Human</label>
+        <!-- Simulated robot check, you can use reCAPTCHA or other methods for a real website -->
+        <input type="text" id="robotCheck" name="robotCheck" required />
+
+        <span>
+          <button id="submitform" type="submit" onclick="validateAndSubmit()">
+            Submit
           </button>
+        </span>
+      </form>
+    </section>
 
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            
-            <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contacts">Contact</a>
-              </li>
-            
-          </ul>
-          </div>
-          
-        </div>
-      </nav>
-      
-   <!-- Landing page -->
-   <section class="hello" id="home">
-           
-    <div class="box-container container-fluid">
-        <div class="square">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-           <div id="he-div" ><h1 class="">HE</h1></div> 
-           <div id="llo-div" ><h1 class="">LLO.</h1></div> 
-        </div>
-    </div>
-        <div class="subcontainer">
-    <div class="half1"></div>
-    <div class="half2"></div>
-    </div>
-    
-   </section>
-   
-   <div class="container">
- 
-    <section class="aboutsection" id="about">
-        <div class="title-div">
-            <div class="title-overline"></div>
-            <h4 class="title">ABOUT ME</h4>
-        </div>
-        <div class="row about-wrapper">
-            <div class="col-md-5 ">
-                <h1 id="hi" style="color:#0B0E47 ;"  >Hi!</h1>
-              <h5 style="color: #FF5851; margin-top: 20px;">I'm </h5>
-              <h2  style="color: #FF5851;">Oduola <br> Ayodele</h2>
-              <h4>A <span style="font-weight:bolder">Front End</span> Web Developer</h4>
-              <p class="text-muted">I develop amazing websites and Apps that are fast, sleek,
-                                    fully Responsive <span >(Looks awesome on any device)</span> ,
-                                     secure and user friendly! <a href="https://wa.me/2347084951666?text=" target="_blank">Contact me</a> 
-                                     (Whatsapp) for your web Development gig Today at a very rewarding price.</p>
-            </div>
-            <div class="col-md-7 pic-wrapper"  data-aos="fade-left">
-                <img src="Images/Ayo1.png" alt="Ayodele">
-            </div>
-    </div>
-</section>
+    <!-- footer -->
+    <footer>
+      <p#>Copyright &#169; 2023 Ayodele Oduola. All Rights Reserved.</p#>
+    </footer>
 
-<section class="skillssection" id="skills">
-    <div class="title-div">
-        <div class="title-overline"></div>
-        <h4 class="title">SKILLS</h4>
-    </div>
-    <h5 class="text-center" style="color: #020223;">Here's a Range of the Skills and Technologies I Use.</h5>
-    <div style="color:#0B0E47; font-weight: bold;">
-    <div class="ratingscontainer">
-    
-      <!-- <i class="fa-brands fa-html5 fa-2x"></i> -->
-      <label for="jquery">HTML</label>
-    
-        <div class="progress">
-            <div class="progress-bar" id="html"  role="progressbar" aria-label="Basic example" 
-                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">95%</div>
-            </div>
-    </div>
+    <script src="script.js"></script>
 
-    <div class="ratingscontainer">
-    
-      <!-- <i class="fa-brands fa-css3-alt fa-2x"></i> -->
-      <label for="jquery">CSS</label>
-    
-        <div class="progress">
-            <div class="progress-bar" id="css"  role="progressbar" aria-label="Basic example" 
-                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-    </div>
-
-    <div class="ratingscontainer">
-    
-      <!-- <i class="fa-brands fa-square-js fa-2x"></i> -->
-      <label for="jquery">JAVASCRIPT</label>  
-    
-        <div class="progress">
-            <div class="progress-bar" id="javascript"  role="progressbar" aria-label="Basic example" 
-                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-    </div>
-
-    <div class="ratingscontainer">
-    
-        <label for="jquery">JQUERY</label>
-          
-    
-        <div class="progress">
-            <div class="progress-bar" id="jquery"  role="progressbar" aria-label="Basic example" 
-                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-    </div>
-
-    <div class="ratingscontainer">
-    
-        <label for="bootstrap">BOOTSTRAP</label>
-          
-    
-        <div class="progress">
-            <div class="progress-bar" id="bootstrap"  role="progressbar" aria-label="Basic example" 
-                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-    </div>
-
-    <div class="ratingscontainer">
-    
-        <label for="sql">SQL</label>
-          
-    
-        <div class="progress">
-            <div class="progress-bar" id="sql"  role="progressbar" aria-label="Basic example" 
-                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-    </div>
-
-    <div class="ratingscontainer progressBarAnimationScroll">
-    
-        <label for="wordpress">WORDPRESS</label>
-          
-    
-        <div class="progress">
-            <div class="progress-bar" id="wordpress"  role="progressbar" aria-label="Basic example" 
-                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-    </div>
-
-<div class="ratingscontainer">
-    
-    <label for="git">GIT</label>
-      
-
-    <div class="progress">
-        <div class="progress-bar" id="git"  role="progressbar" aria-label="Basic example" 
-            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-        </div>
-</div>
-
-<div class="ratingscontainer">
-    
-    <label for="github">GITHUB</label>
-      
-
-    <div class="progress">
-        <div class="progress-bar" id="github"  role="progressbar" aria-label="Basic example" 
-            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-        </div>
-</div>
-
-
-
-<div class="ratingscontainer">
-    
-    <label for="android">ANDROID</label>
-      
-
-    <div class="progress">
-       <div class="progress-bar" id="android"  role="progressbar" aria-label="Basic example" 
-            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-        </div>
-</div>
-
-
-<div class="ratingscontainer">
-<label for="java">JAVA</label>
-      
-
-<div class="progress">
-       <div class="progress-bar" id="java"  role="progressbar" aria-label="Basic example" 
-            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-<!-- projects -->
-<section class="projectssection" id="projects">
-    <div class="title-div">
-        <div class="title-overline"></div>
-        <h4 class="title">RECENT PROJECTS</h4>
-    </div>
-<div class="row">
-    <div class="col-md-6"  data-aos="fade-up">
-        <div class="card prjcard1">
-          <span class="text-center" style="color: #020223; font-weight: 500;">EDUFORD</span>
-          <video preload="auto" muted autoplay loop id="myVideo">
-           <source type="video/mp4" src="Images/eduford video.webm">
-           Your Browser doesn't support the video tag
-        </video>
-             <div class="card-body text-center">
-                 <h1 class="kreep">
-                     <a class="visitbtn" href="#" ><b>Visit Site</b></a>
-                   </h1>
-             </div>
-          </div>
-    </div>
-    
-    
-    <div class="col-md-6"  data-aos="fade-up">
-        <div class="card prjcard2">
-          <span class="text-center" style="color: #020223; font-weight: 500;">FURNITURE Z</span>
-       <video preload="auto" muted autoplay loop id="myVideo">
-        <source type="video/mp4" src="Images/furniture vid.webm">
-        Your Browser doesn't support the video tag
-     </video>
-          <div class="card-body text-center">
-              <h1 class="kreep">
-                  <a class="visitbtn" href="#" ><b>Visit Site</b></a>
-                </h1>
-          </div>
-          </div>
-    </div>
-
-    <div class="col-md-6 tesladiv"  data-aos="fade-up">
-      <div class="card prjcard3">
-       <span class="text-center" style="color: #020223; font-weight: 500;">TESLA (UNDERGOING SITE MAINTENANCE)</span>
-       <video preload="auto" autoplay muted loop id="myVideo">
-        <source type="video/mp4" src="Images/tesla video.webm">
-        Your Browser doesn't support the video tag
-     </video>
-          <div class="card-body text-center">
-              <!-- <h1 class="kreep">
-                  <a class="visitbtn" href="Tesla/index.html" ><b>Visit Site</b></a>
-                </h1> -->
-          </div>
-        </div>
-  </div>
-
-</div>
-</section>
-
-
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-    
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Message Sent!</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-    
-          <!-- Modal body -->
-          <div class="modal-body">
-            <div><img src="Images/verified.gif" style="width: 30px;
-             margin-right: 10px;">Thank you for reaching out to me. 
-              I'll respond to you as soon as i receive your mail.</div>
-          </div>
-    
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          </div>
-    
-        </div>
-      </div>
-    </div>  
- 
-   <section class="contactsection" id="contacts">
-    <div class="title-div">
-        <div class="title-overline"></div>
-        <h4 class="title">CONTACT ME</h4>
-    </div>
-<div class="row">
-    <div class="col-md-5">
-        <div id="wrapper">
-           <h5 style="color: #FF5851; margin-top: 20px;">How to get in touch with me?</h5>
-           <h5 style="color: #0B0E47; font-size: 98%; margin-top: 20px;" >Send Me a Mail!</h5>
-            
-           <div id="wrap" class="container">
-                <div >
-                    <p> <span class="text-muted">My Email</span>  <br>
-                <span style="font-size: 90%; color: #0B0E47;">gbengajohn4god@gmail.com</span> </p>
-                </div>
-                
-                <div id="followme">
-                    <p class="text-muted">Follow me <br>
-
-                       
-                        
-                    <a href="https://twitter.com/AY00R" class="socialicon" style="font-size: 90%; color: #8ECDF8;"><i class="fa-brands fa-square-twitter fa-xl"></i></a>
-                    <a href="https://www.linkedin.com/in/ayodele-oduola-aa6a85135/" class="socialicon" style="font-size: 90%; color: #0077B5;"> <i class="fa-brands fa-linkedin fa-xl"></i></a>
-                    <a href="https://github.com/Ayoor" class="socialicon" style="font-size: 90%; color: black;"> <i class="fa-brands fa-github fa-xl"></i></a>
-                    <a href="https://wa.me/2347084951666?text=" class="socialicon" style="font-size: 90%; color: #4DC85A;"> <i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
-                    
-                </p> 
-                </div>
-            </div>
-        </div>
-    </div>
-    
-  
-    
-    <div class="col-md-7">
-        <form action="https://formsubmit.co/b5fbd22d4cf30d4552ba777619bb060b " method="POST" id="contactform">
-
-            <!-- honeypot -->
-            <input type="text" name="_honey" style="display: none;">
-
-            <!-- disable captcha -->
-            <input type="hidden" name="_captcha" value="false">
-
-            <!-- prevent formsubmit page. -->
-            <input type="hidden" name="_next" value="https://ayoor.github.io/">
-            
-            <div class="mb-3">
-                <input type="text" id="name" name="Name" class="form-control inputfield"
-                 placeholder="Enter your Name" >
-
-                 <span id="name-error" class="errormessage"></span>
-
-              </div>
-             
-              <div class="mb-3">
-                <input type="email" id="email" name="Email" class="form-control inputfield"
-                 placeholder="Enter your Email Address">
-
-                 <span id="email-error" class="errormessage"></span>
-
-              </div>
-
-              <div class="mb-3">
-                <input type="tel" name="Phone" id="phone" class="form-control inputfield"
-                 placeholder="Enter your Phone Number (Optional)">
-
-                 <span id="tel-error" class="errormessage"></span>
-                  
-
-              </div>
-              
-              <div class="mb-3">
-                <input type="text" name="Subject" class="form-control inputfield"
-                placeholder="Subject" id="subject" >
-
-                <span id="subject-error" class="errormessage"></span>
-                
-              </div>
-              
-              <div class="mb-3">
-                <textarea class="form-control" name="Message&nbsp;Body" id="messagetext" rows="8" 
-                placeholder="Compose your Message" ></textarea>
-
-                
-                <span id="msg-error" class="errormessage"></span>
-                  
-              </div>
-        
-        
-    </form>
-    <div id="sendwrap">
-      <button id="sendbutton">
-          
-          <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-              </svg>
-            </div>
-          </div>
-          <span>Send</span>
-        </button>
-  </div>
-    </div>
-</div>
-
-</section>
-   </div>
-
-   
-<footer class="footer text-center">
-  <div class="footercontentdiv">
-        <div class="footercontent2">
-        <p>BUILT BY <a href="http://www.ayodele.me">AYODELE</a> &#38; DESIGNED BY
-        <a href="">YAKUB AKOREDE</a></p>
-      </div>
-  </div>
-</footer>
-
-
-
-
-<!-- JavaScript Bundle with Popper -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="pagescript.js"></script>
-<script>
-
-
-    
-
-</script>
-<!-- fade effect script -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-    });
-    
-  </script>
-
+    <!-- test for service worker -->
+    <!-- <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.error("Error registering Service Worker:", error);
+          });
+      }
+    </script> -->
   </body>
 </html>

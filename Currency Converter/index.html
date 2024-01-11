@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- link to css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <!-- the background is of two colours achieved by using a section tag -->
+
+    <section id="topcolor">
+      <header id="titlediv">
+        <h1>Currency Converter</h1>
+         </header>
+    </section>
+
+    <!-- converter panel -->
+<main id="converterPanel">
+  <div id="conversionRatesDiv">
+      <span style="font-size: 200%;" id="conversionRateValue"></span> 
+      <br>
+      <span id="conversionRateTime">Last Updated: 20/11/2023</span>
+  </div>
+  <!-- from -->
+  <section class="currencyinputdiv">
+    <label for="baseAmount">Base Currency</label>
+    <div>
+      <input id="baseAmount" type="number" name="base_value" size="5" min="0" max="50000" oninput="validateInput(this)"/>
+      <select name="base_currency" id="baseCurrency"></select>
+    </div>
+    <script>
+      function validateInput(input) {
+    const errorMessage = document.getElementById("errorMessage");
+
+   
+}
+    </script>
+  </section>
+
+  <!-- To -->
+  <section class="currencyinputdiv">
+    <label for="quoteAmount">Quoted Currency</label>
+    <div>
+      <input type="number" name="target_value" id="quoteAmount" min="0"/>
+      <select name="target_currency" id="quotedCurrency"></select>
+    </div>
+  </section>
+  <p id="error" style="color: red; font-size: 110%; font-weight: bolder;">Error div</p>
+</main>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

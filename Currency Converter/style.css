@@ -1,0 +1,111 @@
+ /* remove default body spacing */
+body {
+   
+    margin: 0;
+    padding: 0;
+  }
+
+  /* background design and styling */
+#topcolor {
+  width: 100%;
+  height: 55vh;
+  background-color: #0a146e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* title styling */
+#titlediv{
+     text-align: center;
+   
+}
+#titlediv  h1{
+    color: white;
+    font-size: 250%;
+    position: relative;
+    bottom: 5rem;
+}
+
+#titlediv p{
+    color: white;
+    position: relative;
+    bottom: 60px;
+}
+
+
+/* panel styling */
+#converterPanel {
+  height: 40vh;
+  width: 70%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+  /* center panel in page */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack child elements vertically on smaller screens */
+  width: 90vw;
+}
+
+/* currency input style */
+.currencyinputdiv {
+  width: 60%;
+  height: 5rem;
+  /* border: 1px solid firebrick; */
+  margin: 10px 0; /* Adjust the margin to control the spacing between stacked elements */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*  for smaller screens */
+@media (max-width: 768px) {
+  .currencyinputdiv {
+    width: 100%; /*  full width on smaller screens */
+  }
+}
+.currencyinputdiv div{
+width: 100%;
+display: flex;
+border: .3px solid grey;
+align-items:center ;
+
+}
+
+input:focus {
+  outline: none;
+
+}
+  select, input{
+  width: 65%;
+    padding: 10px;
+    border: none;
+ }
+ input{
+    border-right: 0.3px solid grey ;
+    height: 3px;
+    width: 30%;
+ }
+select{
+  width: 70%;
+  background-color: white;
+}
+#conversionRatesDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+}
+#error {
+  visibility: hidden;
+}
+ 
