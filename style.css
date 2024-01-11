@@ -506,7 +506,8 @@ gap: 20px"
  }
 #testimonialSection{
   margin-top: 50px;
-  height: 85vh;
+  height: auto;
+  min-height: 82vh;
 }
 
 /* contact form */
