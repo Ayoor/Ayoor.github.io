@@ -34,10 +34,13 @@ a,
   height: 15vh;
   width: 100%;
   background-color: #E5E5FF;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 10;
+  opacity: .9;
+  border-bottom: 1px solid #333;
   
 }
 
@@ -90,7 +93,7 @@ a:hover {
 }
 
 .logo img {
-  width: 12rem;
+  width: 7rem;
 }
 #landingimg {
   width: 80%;
