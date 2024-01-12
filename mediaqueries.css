@@ -100,4 +100,13 @@
   .text-container {
     text-align: justify;
   }
+.section__text p{
+  color: #ffff;
 }
+ .btn{
+  background-color: black;
+  color: #ffff;
+ }
+}
+
+
