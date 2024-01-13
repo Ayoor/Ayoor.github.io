@@ -14,32 +14,20 @@
 
 <!-- service worker -->
 <script>
-
-  //splash screen
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Hide splash screen after 3 seconds (adjust as needed)
-    setTimeout(function () {
-        document.getElementById("splash-screen").style.display = "none";
-        document.getElementById("main-content").style.display = "block";
-    }, 3000);
-});
-
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
       .then(registration => console.log('Service Worker registered with scope:', registration.scope))
       .catch(error => console.error('Service Worker registration failed:', error));
   }
-
 </script>
     
   </head>
 
   <body>
     <!-- Splash Screen -->
-    <div id="splash-screen">
-  <img src="assets/images/mylogo.png" alt="Splash Logo">
-</div>
+    <!-- <div id="splash-screen">
+  <img src="assets/images/Ayodele logo.png" alt="Splash Logo">
+</div> -->
     <!-- desktop-nav -->
    
     <div class="nav">
