@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Line Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas {
+      max-width: 600px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myChart" width="800" height="400"></canvas>
+
+  <script>
+    const xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sept", "Oct", "Nov", "Dec"];
+
+    const yValues1 = [10, 20, 15, 25, 18, 30, 28];
+    const yValues2 = [null,null,null,null,null,null,28,40, 38, 45, 42, 50];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            label: "Dataset 1 (Solid Line)",
+            data: yValues1,
+            borderColor: "blue",
+            borderWidth: 2,
+            fill: false,
+            lineTension: 0, // Straight line
+          },
+          {
+            label: "Dataset 2 (Dotted Line)",
+            data: yValues2,
+            borderColor: "green",
+            borderWidth: 2,
+            fill: false,
+            borderDash: [5, 5], // Dotted line
+          },
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

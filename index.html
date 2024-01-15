@@ -9,32 +9,44 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 
-  <link rel="manifest" href="manifest.json">
+  <!-- <link rel="manifest" href="manifest.json"> -->
 <meta name="theme-color" content="#E5E5FF">
 
 <!-- service worker -->
 <script>
+
+  // splash screen
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Hide splash screen after 3 seconds (adjust as needed)
+    setTimeout(function () {
+        document.getElementById("splash-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+    }, 1000);
+});
+
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
       .then(registration => console.log('Service Worker registered with scope:', registration.scope))
       .catch(error => console.error('Service Worker registration failed:', error));
   }
+
 </script>
     
   </head>
 
   <body>
     <!-- Splash Screen -->
-    <!-- <div id="splash-screen">
-  <img src="assets/images/Ayodele logo.png" alt="Splash Logo">
-</div> -->
+    <div id="splash-screen">
+ <a href="#profile"></a> <img src="assets/images/mylogo.webp" alt="Splash Logo">
+</div>
     <!-- desktop-nav -->
    
     <div class="nav">
       <input type="checkbox" id="nav-check">
       <div class="nav-header">
         <div class="nav-title logo">
-          <img src="assets/images/mylogo.png" alt="My logo">
+          <img src="assets/images/mylogo.webp" alt="My logo">
         </div>
       </div>
       <div class="nav-btn">
@@ -60,13 +72,13 @@
         <div class="section__pic-container">
           <!-- <img
             id="logo"
-            src="./assets/images/Ayodele.png"
+            src="./assets/images/Ayodele.webp"
             alt="A picture of me"
           /> -->
           <picture>
             <img
               id="landingimg"
-              src="./assets/images/Ayodele.png"
+              src="./assets/images/Ayodele.webp"
               alt="A picture of me"
             />
             <source srcset="cat.avif" type="image/avif" />
@@ -94,13 +106,13 @@
           </div>
           <div id="socials-container">
             <img
-              src="./assets/images/linkedin.png"
+              src="./assets/images/linkedin.webp"
               alt="My LinkedIn profile"
               class="icon"
               onclick="location.href='https://www.linkedin.com/in/ayodele-oduola/'"
             />
             <img
-              src="./assets/images/github.png"
+              src="./assets/images/github.webp"
               alt="My Github profile"
               class="icon"
               onclick="location.href='https://github.com/Ayoor'"
@@ -111,7 +123,7 @@
       <!-- Smooth Scroll down arrow  -->
       <div class="downarrow">
         <img
-          src="./assets/images/arrow.png"
+          src="./assets/images/arrow.webp"
           alt="Arrow icon"
           class="arrow"
           onclick="location.href='./#about'"
@@ -127,13 +139,13 @@
         <div class="section-container">
           <div class="section__pic-container">
             <img 
-            src="./assets/images/self_Portrait.png"
+            src="./assets/images/self_Portrait.webp"
             alt="Profile picture"
             class="about-pic"
           />
             <!-- <picture>
               <img 
-              src="./assets/images/self_Portrait.png"
+              src="./assets/images/self_Portrait.webp"
               alt="Profile picture"
               class="about-pic"
             />
@@ -160,7 +172,7 @@
       <!-- Smooth Scroll down arrow  -->
       <div class="downarrow">
         <img
-          src="./assets/images/arrow.png"
+          src="./assets/images/arrow.webp"
           alt="Arrow icon"
           class="arrow"
           onclick="location.href='./#experience'"
@@ -246,7 +258,7 @@
     <!-- Smooth Scroll down arrow  -->
     <div class="downarrow">
       <img
-        src="./assets/images/arrow.png"
+        src="./assets/images/arrow.webp"
         alt="Arrow icon"
         class="arrow"
         onclick="location.href='./#skillsSection'"
@@ -264,7 +276,7 @@
               <div class="article-container">
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -275,7 +287,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -286,7 +298,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -297,7 +309,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -308,7 +320,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -319,7 +331,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -330,7 +342,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -341,7 +353,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -352,7 +364,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -363,7 +375,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -380,7 +392,7 @@
               <div class="article-container">
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -391,7 +403,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -402,7 +414,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -413,7 +425,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -424,7 +436,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -435,7 +447,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -446,7 +458,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -457,7 +469,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -468,7 +480,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -479,7 +491,7 @@
                 </article>
                 <article>
                   <img
-                    src="./assets/images/checkmark.png"
+                    src="./assets/images/checkmark.webp"
                     alt="Experience icon"
                     class="icon"
                   />
@@ -497,7 +509,7 @@
       <!-- Smooth Scroll down arrow  -->
       <div class="downarrow">
         <img
-          src="./assets/images/arrow.png"
+          src="./assets/images/arrow.webp"
           alt="Arrow icon"
           class="arrow"
           onclick="location.href='./#projects'"
@@ -514,7 +526,7 @@
           <div class="details-container color-container">
             <div>
               <img
-                src="./assets/images/converter.png"
+                src="./assets/images/converter.webp"
                 alt="Project 1"
                 class="project-img"
               />
@@ -533,7 +545,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/images/forecasterscreenshot.png"
+                src="./assets/images/forecasterscreenshot.webp"
                 alt="Project 2"
                 class="project-img"
               />
@@ -555,7 +567,7 @@
       <!-- Smooth Scroll down arrow  -->
       <div class="downarrow">
         <img
-          src="./assets/images/arrow.png"
+          src="./assets/images/arrow.webp"
           alt="Arrow icon"
           class="arrow"
           onclick="location.href='./#testimonialSection'"
@@ -571,7 +583,7 @@
       <main id="testimonialcontainer">
         <div class="testimonialCard">
           <img
-            src="assets/images/James2.jpg"
+            src="assets/images/James2.webp"
             alt="Image of James"
             class="testimonialImg"
           />
@@ -588,7 +600,7 @@
 
         <div class="testimonialCard">
           <img
-            src="assets/images/Amanda.jpg"
+            src="assets/images/Amanda.webp"
             alt="Image of Amanda"
             class="testimonialImg"
           />
@@ -604,7 +616,7 @@
         </div>
         <div class="testimonialCard">
           <img
-            src="assets/images/Rebecca.jpg"
+            src="assets/images/Rebecca.webp"
             alt="Image of Rebecca"
             class="testimonialImg"
           />
@@ -621,7 +633,7 @@
 
         <div class="testimonialCard">
           <img
-            src="assets/images/Sola.jpg"
+            src="assets/images/Sola.webp"
             alt="Image of Sola"
             class="testimonialImg"
           />

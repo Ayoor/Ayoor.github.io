@@ -282,6 +282,12 @@ section, main{
   background-color:  #b3b3d9;
   height: 85vh;
 }
+@media  (min-width:500px ) {
+  .backwrapper1{
+    background-color:  #b3b3d9;
+    height: 101vh;
+  }
+}
 
 .backwrapper2{
   background-color:  white;
